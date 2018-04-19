@@ -1,3 +1,70 @@
+@font-face{
+	font-family: Agarde;
+	src:url(../font/ITCAvantGardeStd-Bold.otf);
+	font-weight: bold;
+}
+@font-face{
+	font-family: Akura;
+	src:url(../font/AkkuratStd-Regular.otf);
+}
+*{
+	box-sizing: border-box;
+}
 body{
+	font-family: Agarde;
 	background-color: #728;
+	padding: 0;
+	margin: 0;
+}
+.section{
+	background-color: #182727;
+	padding: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+.section_inner{
+	display: inline-block;
+	background-color: #272902;
+	width: 100%;
+	padding: 40px;
+}
+.left_comp{
+	display: inline-block;
+	background-color: #827;
+	padding: 20px;	
+	width: 35%;	
+}
+.form{
+	background-color: #928382;
+	display: inline-block;
+	padding: 20px 10px;
+}
+.right_comp{
+	display: inline-block;
+	background-color: #273930;
+	padding: 20px;
+	width: 65%;
+	float: right;
+	text-align: center;
+}
+.output{
+	background-color: #928337;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: left;
+}
+.output ul{
+	padding: 0; 
+	list-style: none;
+	margin: 0;
+}
+.output ul li{
+	padding: 0; 
+	margin: 0;
+}
+.output ul li h3{
+	font-family: Akura;
+	padding: 0; 
+	margin: 0;
 }
