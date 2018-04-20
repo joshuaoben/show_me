@@ -10,32 +10,40 @@
 *{
 	box-sizing: border-box;
 }
-body{
+body, html{
 	font-family: Agarde;
 	background-color: #000;
-	padding: 0;
+	padding: 0px;
 	margin: 0;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
 }
 .section{
 	background-color: rgba(0,0,0,0.2);
 	display: inline-block;
 	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
 
 .section_inner{
 	display: inline-block;
 	width: 100%;
-	height: 680px;
+	height: 100%;
 }
 .left_comp{
 	display: inline-block;
 	background-color: rgba(253,253,253,1.0);
-	padding: 12% 20px;	
+	padding: auto 20px;	
 	width: 35%;	
 	float: left;
 	text-align: center;
 	height: 100%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
 }
 .form{
 	background-color: rgba(0,0,0,0.0);
@@ -78,17 +86,21 @@ body{
 }
 .button:hover{
 	width: 238px;
-	height: 48px;
+	height: 50px;
 	box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
 }
 .right_comp{
-	display: inline-block;
-	padding: 14% 0;
 	width: 60%;
 	text-align: center;
 	height: 100%;
+  	float: left;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+	transition: background-color 2s;
 	background-image: url("../img/bg.jpg");
 	background-size: cover;
+	border-left:solid 4px rgba(70, 180, 160, 0.9);
 	background-position: center;
 	background-color: -webkit-radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* Safari 5.1-6.0 */
     background-color: -o-radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* For Opera 11.6-12.0 */
@@ -96,25 +108,34 @@ body{
     background-color: radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* Standard syntax */
 }
 .right_comp:hover{
-	background-color: rgba(0,0,0,0.5);
-	background-blend-mode: overlay;
+	background-image: url("../img/bg.jpg"),linear-gradient(rgba(215,0,90, 0.6), rgba(70, 180, 160,0.99)), linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0,0.4));
+	background-blend-mode: soft-light;
 }
 .right_comp:hover .output{
-	display: inline-block;
-	transition: display;
-	-webkit-transition: display 2s;  /* For Safari 3.1 to 6.0 */
-    
+    opacity: 100;
 }
 .output{
-	display: none;
-	background-color: rgba(255,255,255,0.9);
+	display: inline-block;
+	width: 50%;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.7);
 	border-bottom: solid 4px rgba(70, 180, 160, 0.9);
 	border-right: solid 4px rgba(70, 180, 160, 0.9);
 	border-top: solid 4px rgba(70, 180, 160, 0.9);
 	color: #000;
 	padding: 60px;
 	margin: 0;
-	text-align: left;float: left;
+	text-align: left;
+	float: left;
+	transition: opacity 2s;
+	animation: output 3s;
+}
+@keyframes output {
+    from {margin-left: -30px;}
+    to {margin-left: 0px;}
+} 
+.output_inner{
+	display: inline-block;
 }
 .output h2{
 	padding: 5px 0;
@@ -126,8 +147,8 @@ body{
 	margin: 0;
 }
 .output h4{
-	background-color: rgba(70, 180, 160, 0.9);
-	color: rgba(255,255,255,0.8);
+	background-color: rgba(70, 180, 160, 0.5);
+	color: rgba(255,255,255,0.9);
 	display: inline-block;
 	padding: 10px;
 	margin: 0;
@@ -155,9 +176,14 @@ body{
 	font-size: 16px;
 }
 .r_right{
-	background-color: #000;
+	background: linear-gradient(rgba(70, 180, 160, 0.9), rgba(215,0,90,0.6));
 	width: 5%;
 	display: block;
 	float: right;
 	height: 100%;
+	transition-duration: 2s;
+	color: transparent;
+}
+.r_right:hover{
+	background: linear-gradient(rgba(215,0,90,0.6), rgba(70, 180, 160, 0.9));
 }
