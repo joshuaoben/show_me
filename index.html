@@ -8,19 +8,19 @@
 	<section class="section">
 		<div class="section_inner">
 			<div class="left_comp">
-				<form class="form">
+				<form class="form" method="POST">
 					<div class="logo">
 						<img src="img/logo.png">
 					</div>
-					<input class="input" type="text" name="name" placeholder="Name/Nick">
-					<input class="input" type="date" name="date" placeholder="Date of Birth(DD/MM)">
-					<input class="button" type="submit" name="check" value="Show">
+					<input class="input" type="text" id="name" name="name" placeholder="Name/Nick">
+					<input class="input" id="date" type="date" name="date" placeholder="Date of Birth(DD/MM)">
+					<button onclick="Check()" id="submit" class="button" type="button" name="check">Show </button>
 				</form>
 			</div>
-			<div class="right_comp">
-				<div class="output">
+			<div class="right_comp" id="right_comp">
+				<div class="output" id="output">
 					<div class="output_inner">
-						<h2>Hurray Jay!</h2>
+						<h2>Hurray <i id="display_name">Jay! </i></h2>
 						<h4>Your Zodiac Sign is: <span>Aries</span></h4>
 						<ul>
 							<span class="sub_head">Characteristics:</span>

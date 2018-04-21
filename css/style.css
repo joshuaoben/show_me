@@ -102,20 +102,26 @@ body, html{
 	background-size: cover;
 	border-left:solid 4px rgba(70, 180, 160, 0.9);
 	background-position: center;
-	background-color: -webkit-radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* Safari 5.1-6.0 */
-    background-color: -o-radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* For Opera 11.6-12.0 */
-    background-color: -moz-radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* For Firefox 3.6-15 */
-    background-color: radial-gradient(transparent 60%, rgba(0,0,0,0.5) 80%); /* Standard syntax */
 }
-.right_comp:hover{
+.right_comp_hover{
+	width: 60%;
+	text-align: center;
+	height: 100%;
+  	float: left;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+	transition: background-color 2s;
+	background-size: cover;
+	border-left:solid 4px rgba(70, 180, 160, 0.9);
+	background-position: center;
 	background-image: url("../img/bg.jpg"),linear-gradient(rgba(215,0,90, 0.6), rgba(70, 180, 160,0.99)), linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0,0.4));
 	background-blend-mode: soft-light;
 }
-.right_comp:hover .output{
+.right_comp_output{
     opacity: 100;
 }
 .output{
-	display: inline-block;
 	width: 50%;
 	opacity: 0;
 	background-color: rgba(255,255,255,0.7);
