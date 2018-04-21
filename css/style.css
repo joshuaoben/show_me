@@ -53,10 +53,24 @@ body, html{
 }
 
 .logo{
-	background-color: rgba(0,0,0,0.0);
+	background-color: rgba(0,0,0,0.0 );
+	margin-bottom: 10px;
 }
 .logo img{
 	width: 200px;
+}
+.error{
+	color: rgba(215,0,90,0.85);
+	display: inline-block;
+	font-family: Akura;
+	font-size: 14px;
+	line-height: 14px;
+	margin: 0 auto;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.no_error{
+	display: none;
 }
 .input{
 	width: 240px;
@@ -64,6 +78,7 @@ body, html{
 	height: 50px;
 	padding: 20px;
 	margin: 20px;
+	margin-top: 0;
 	font-family: Akura;
 	border-radius: 2px;
 	border: solid thin rgba(0,0,0, 0.2);
@@ -130,11 +145,31 @@ body, html{
 	border-top: solid 4px rgba(70, 180, 160, 0.9);
 	color: #000;
 	padding: 60px;
+	padding-right: 0;
 	margin: 0;
 	text-align: left;
 	float: left;
 	transition: opacity 2s;
 	animation: output 3s;
+}
+.back{
+	display: inline-block;
+	background-color: rgba(215,0,90,0.6);
+	float: right;
+	margin-right: 10px;
+	padding:8px;
+	margin: 0;
+	border-radius: 2px 0 0 2px;
+	border: none;
+	transition: background-color 2s;
+}
+.back:hover{
+	background-color: rgba(70, 180, 160, 0.9);
+}
+.back img{
+	height: 18px;
+	opacity: 40;
+	margin: 0;
 }
 @keyframes output {
     from {margin-left: -30px;}
