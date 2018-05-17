@@ -222,7 +222,7 @@ body, html{
 	display: block;
 	float: right;
 	height: 100%;
-	transition-duration: 2s;
+	transition: 2s;
 	color: transparent;
 }
 .r_right:hover{

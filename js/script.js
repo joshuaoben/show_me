@@ -1,5 +1,7 @@
 
 
+/*var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = new Date().getDate();*/
 
 function Check() {
 	var name = document.getElementById('name').value,
